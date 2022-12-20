@@ -21,38 +21,49 @@
     </div>
     <div class="row mt-4">
       <div class="col-sm-12">
-        <ol class="list-group">
-          <li class="list-group-item">
-            Question 1 <br>
-            Dans quel continent je suis? <br>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">l'Afrique</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">l'Amérique</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">l'Antarctique</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">l'Asie</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-              <label class="form-check-label" for="inlineCheckbox3">l'Europe (disabled)</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-              <label class="form-check-label" for="inlineCheckbox3">l'Océanie</label>
-            </div>
-          </li>
-          <li class="list-group-item">A list item</li>
-          <li class="list-group-item">A list item</li>
-        </ol>
+        <form method="POST" action="question2.php">
+          <ol class="list-group">
+            <li class="list-group-item" id="p1_question1">
+              Question 1 <br>
+              Dans quel continent je suis? <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="asie" name="contenet" value="asie" required onclick="contenetQ()">
+                <label class="form-check-label" for="asie">l'Asie</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="europe" name="contenet" value="europe" required onclick="contenetQ()">
+                <label class="form-check-label" for="europe">l'Europe</label>
+              </div>
+            </li>
+            <li class="list-group-item d-none" id="p2_question2">
+              Question 2 <br>
+              J'ai une superficie : <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="plus" name="superficie" value="plus" required>
+                <label class="form-check-label" for="plus">> 300 k km^2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="moins" name="superficie" value="moins" required>
+                <label class="form-check-label" for="moins">
+                  < 300 k km^2</label>
+              </div>
+            </li>
+            <li class="list-group-item d-none">
+              Question 3 <br>
+              J'ai des côtes sur la mer méditerranée : <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="oui" name="cotes" value="oui" required>
+                <label class="form-check-label" for="oui">Oui</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="non" name="cotes" value="non" required>
+                <label class="form-check-label" for="non">
+                  Non</label>
+              </div>
+            </li>
+          </ol>
+          <button class="btn btn-primary m-3 d-none" type="submit" name="submit">Enovyer</button>
+        </form>
       </div>
     </div>
   </div>
